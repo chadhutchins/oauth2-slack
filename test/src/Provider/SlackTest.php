@@ -1,7 +1,7 @@
 <?php
-namespace AdamPaterson\OAuth2\Client\Test\Provider;
+namespace Chadhutchins\OAuth2\Client\Test\Provider;
 
-use AdamPaterson\OAuth2\Client\Provider\Slack;
+use Chadhutchins\OAuth2\Client\Provider\Slack;
 use Mockery as m;
 use ReflectionClass;
 
@@ -11,7 +11,7 @@ class SlackTest extends \PHPUnit_Framework_TestCase
 
     protected static function getMethod($name)
     {
-        $class = new ReflectionClass('AdamPaterson\OAuth2\Client\Provider\Slack');
+        $class = new ReflectionClass('Chadhutchins\OAuth2\Client\Provider\Slack');
         $method = $class->getMethod($name);
         $method->setAccessible(true);
         return $method;
@@ -53,7 +53,7 @@ class SlackTest extends \PHPUnit_Framework_TestCase
         $token = m::mock('League\OAuth2\Client\Token\AccessToken', [['access_token' => 'mock_access_token']]);
         $token->shouldReceive('__toString')->andReturn('mock_access_token');
 
-        $provider = m::mock('AdamPaterson\OAuth2\Client\Provider\Slack');
+        $provider = m::mock('Chadhutchins\OAuth2\Client\Provider\Slack');
         $provider->shouldReceive('getAuthorizedUser')->andReturn($authUser);
         $provider->shouldReceive('getResourceOwnerDetailsUrl')->once()->andReturn('https://slack.com/api/users.info?token=mock_access_token&user=U12345');
 
@@ -98,7 +98,7 @@ class SlackTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \AdamPaterson\OAuth2\Client\Provider\Exception\SlackProviderException
+     * @expectedException \Chadhutchins\OAuth2\Client\Provider\Exception\SlackProviderException
      */
     public function testCheckResponseThrowsIdentityProviderException()
     {

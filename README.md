@@ -21,7 +21,7 @@ $ composer require chadhutchins/oauth2-slack
 ```
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\AdamPaterson\OAuth2\Client\Provider\Slack` as the provider.
+Usage is the same as The League's OAuth client, using `\Chadhutchins\OAuth2\Client\Provider\Slack` as the provider.
 
 ### Authorization Code Flow
 ```php
@@ -30,7 +30,7 @@ Usage is the same as The League's OAuth client, using `\AdamPaterson\OAuth2\Clie
 
 session_start();
  
-$provider = new \AdamPaterson\OAuth2\Client\Provider\Slack([
+$provider = new \Chadhutchins\OAuth2\Client\Provider\Slack([
     'clientId'          => '{slack-client-id}',
     'clientSecret'      => '{slack-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url',
@@ -82,7 +82,7 @@ if (!isset($_GET['code'])) {
  OAuth scopes, indicating which parts of the Slack user's account you'd like your app to be able to access. The complete list of scopes can be found [here](https://api.slack.com/docs/oauth-scopes).
  
  ```php
-$provider = new \AdamPaterson\OAuth2\Client\Provider\Slack([
+$provider = new \Chadhutchins\OAuth2\Client\Provider\Slack([
     'clientId'          => '{slack-client-id}',
     'clientSecret'      => '{slack-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url',

@@ -1,6 +1,6 @@
 <?php
 
-namespace AdamPaterson\OAuth2\Client\Provider\Exception;
+namespace Chadhutchins\OAuth2\Client\Provider\Exception;
 
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use Psr\Http\Message\ResponseInterface;
@@ -12,7 +12,7 @@ class SlackProviderException extends IdentityProviderException
      * @param  string|null       $message
      *
      * @return IdentityProviderException
-     * @throws \AdamPaterson\OAuth2\Client\Provider\Exception\SlackProviderException
+     * @throws \Chadhutchins\OAuth2\Client\Provider\Exception\SlackProviderException
      */
     public static function fromResponse(ResponseInterface $response, $message = null)
     {

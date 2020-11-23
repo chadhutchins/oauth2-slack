@@ -1,14 +1,14 @@
 <?php
 
 
-namespace AdamPaterson\OAuth2\Client\Provider;
+namespace Chadhutchins\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 
 /**
  * Class SlackAuthorizedUser
  *
- * @package AdamPaterson\OAuth2\Client\Provider
+ * @package Chadhutchins\OAuth2\Client\Provider
  */
 class SlackAuthorizedUser implements ResourceOwnerInterface
 {

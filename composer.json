@@ -1,5 +1,5 @@
 {
-    "name": "adam-paterson/oauth2-slack",
+    "name": "chadhutchins/oauth2-slack",
     "description": "Slack OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
     "keywords": [
         "oauth",
@@ -18,6 +18,10 @@
         {
             "name": "Adam Paterson",
             "email": "hello@adampaterson.co.uk"
+        },
+        {
+            "name": "Chad Hutchins",
+            "email": "hutchins.chad@gmail.com"
         }
     ],
     "require": {
@@ -31,12 +35,12 @@
     },
     "autoload": {
         "psr-4": {
-            "AdamPaterson\\OAuth2\\Client\\": "src/"
+            "Chadhutchins\\OAuth2\\Client\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "AdamPaterson\\OAuth2\\Client\\Test\\": "test/src/"
+            "Chadhutchins\\OAuth2\\Client\\Test\\": "test/src/"
         }
     }
 }

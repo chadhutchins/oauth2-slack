@@ -1,19 +1,20 @@
 <?php
 
-namespace AdamPaterson\OAuth2\Client\Provider;
+namespace Chadhutchins\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Token\AccessToken;
 use Psr\Http\Message\ResponseInterface;
-use AdamPaterson\OAuth2\Client\Provider\Exception\SlackProviderException;
+use Chadhutchins\OAuth2\Client\Provider\Exception\SlackProviderException;
 
 /**
  * Class Slack
  *
  * @author Adam Paterson <hello@adampaterson.co.uk>
+ * @author Chad Hutchins <hutchins.chad@gmail.com>
  *
- * @package AdamPaterson\OAuth2\Client\Provider
+ * @package Chadhutchins\OAuth2\Client\Provider
  */
 class Slack extends AbstractProvider
 {
@@ -75,7 +76,7 @@ class Slack extends AbstractProvider
      * @param array|string      $data Parsed response data
      *
      * @return \League\OAuth2\Client\Provider\Exception\IdentityProviderException
-     * @throws \AdamPaterson\OAuth2\Client\Provider\Exception\SlackProviderException
+     * @throws \Chadhutchins\OAuth2\Client\Provider\Exception\SlackProviderException
      */
     protected function checkResponse(ResponseInterface $response, $data)
     {
